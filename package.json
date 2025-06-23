@@ -1,0 +1,4 @@
+"scripts": {
+  "start": "node server.js", // lub inny plik startowy backendu
+  "build": "react-scripts build" // jeśli frontend wymaga budowania (create-react-app)
+}

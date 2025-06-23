@@ -1,0 +1,121 @@
+/* Menu.css */
+:root {
+  --background-color: #ffffff;
+  --text-color: #333333;
+  --primary-color: #007bff;
+  --menu-bg-color: #f8f9fa;
+  --menu-width: 20rem;
+}
+body{
+     font-family: "Trebuchet MS", Tahoma, sans-serif;
+}
+
+.menu-container {
+  position: relative;
+}
+
+.hamburger {
+  position: fixed;    /* przypięcie do okna */
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 1.8rem;
+  height: 1.3rem;
+  padding: 1rem;
+  cursor: pointer;
+  z-index: 999; /* żeby była ponad overlay i menu */
+}
+
+
+.hamburger span {
+  height: 0.2rem;
+  width: 100%;
+  background-color: var(--text-color);
+  transition: all 0.3s ease;
+}
+
+.menu-content {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: var(--menu-width);
+  height: 100vh;
+  background-color: var(--menu-bg-color);
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-content.active {
+  transform: translateX(0);
+}
+
+.menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.menu-logo {
+  height: 2.5rem;
+  width: auto;
+  max-width: 150px;
+}
+
+.close-menu {
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+.menu-items {
+  flex: 1;
+  padding: 1rem;
+}
+
+.menu-items p {
+  padding: 1rem 0;
+  margin: 0;
+  color: var(--text-color);
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.menu-items p:hover {
+  color: var(--primary-color);
+}
+
+.menu-footer {
+  padding: 1rem;
+  border-top: 1px solid #ddd;
+  display: flex;
+  justify-content: center;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+/* Tryb ciemny */
+.dark-mode {
+  --background-color: #1a1a1a;
+  --text-color: #f8f9fa;
+  --menu-bg-color: #2d2d2d;
+}
+
+.dark-mode .menu-header,
+.dark-mode .menu-footer {
+  border-color: #444;
+}

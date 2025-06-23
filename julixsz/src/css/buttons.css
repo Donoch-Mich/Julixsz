@@ -1,0 +1,40 @@
+.auth-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 1rem 0;
+}
+
+/* wspólna baza */
+.auth-btn {
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.4rem;
+  border: 1px solid transparent;
+  transition: all 0.2s ease-in-out;
+  width: 100%;
+  cursor: pointer;
+}
+
+/* jasny motyw */
+.auth-btn-light {
+  background-color: #f0f0f0;
+  color: #000;
+  border: 1px solid #ccc;
+}
+
+.auth-btn-light:hover {
+  background-color: #e0e0e0;
+}
+
+/* ciemny motyw */
+.auth-btn-dark {
+  background-color: #222;
+  color: #fff;
+  border: 1px solid #555;
+}
+
+.auth-btn-dark:hover {
+  background-color: #333;
+}

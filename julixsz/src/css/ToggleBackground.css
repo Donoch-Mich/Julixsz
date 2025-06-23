@@ -1,0 +1,25 @@
+/* ToggleBackground.css */
+
+:root {
+  --background-color: #ffffff;
+  --text-color: #333333;
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  /* Dodaj inne zmienne kolorystyczne według potrzeb */
+}
+
+:root.dark-mode {
+  --background-color: #1a1a1a;
+  --text-color: #f8f9fa;
+  --primary-color: #0d6efd;
+  --secondary-color: #5a6268;
+  /* Dodaj inne zmienne kolorystyczne dla trybu ciemnego */
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Możesz dodać style dla innych elementów używających tych zmiennych */

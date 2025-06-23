@@ -1,0 +1,14 @@
+body, html, #root {
+  height: 100%;
+  margin: 0;
+}
+
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app-wrapper > *:last-child {
+  margin-top: auto;
+}
